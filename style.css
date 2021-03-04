@@ -17,6 +17,15 @@ p {
 	color: black;
 }
 
+.back {
+	background-color: aliceblue;
+	border-radius: 4px;
+	color: blue;
+	padding: 10px 30px;
+	font-size: 24px;
+	text-decoration: none;
+}
+
 .ol {
 	width: 1180px;
 }
@@ -42,11 +51,14 @@ p {
 }
 
 .card-a {
+	margin: 0 155px;
+}
+
+.zadanie-a, .card-a {
 	color: white;
 	font-size: 26px;
 	background-color: #2b77df;
 	padding: 20px;
 	text-decoration: none;
-	margin: 0 155px;
 	border-radius: 4px;
 }
