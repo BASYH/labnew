@@ -17,6 +17,15 @@ p {
 	color: black;
 }
 
+h2 {
+	color: aliceblue;
+	font-size: 34px;
+}
+
+.text {
+	color: cornsilk;
+	font-size: 28px;
+}
 .back {
 	background-color: aliceblue;
 	border-radius: 4px;
