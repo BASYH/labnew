@@ -1,0 +1,52 @@
+﻿body {
+	background-color: #505258;
+}
+
+.container {
+	width: 1180px;
+	margin: 100px auto;
+}
+
+h1 {
+	color: aliceblue;
+	font-size: 48px;
+	font-weight: bold;
+}
+
+p {
+	color: black;
+}
+
+.ol {
+	width: 1180px;
+}
+
+.li {
+	display: inline-block;
+	width: 500px;
+}
+
+.li-card {
+	margin: 0;
+	width: 450px;
+	height: 300px;
+	background-color: aliceblue;
+	border-radius: 4px;
+}
+
+.li-p {
+	font-size: 32px;
+	text-align: center;
+	padding-top: 50px;
+	padding-bottom: 100px;
+}
+
+.card-a {
+	color: white;
+	font-size: 26px;
+	background-color: #2b77df;
+	padding: 20px;
+	text-decoration: none;
+	margin: 0 155px;
+	border-radius: 4px;
+}
