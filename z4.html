@@ -17,7 +17,7 @@
 			var x, y, pass;
 			pass=1;
 			pass1=prompt("Введите пароль",'');
-			if(pass==pass1){
+			if(pass1==pass){
 				alert("Пароль введен правильно");
 			}
 			
@@ -32,12 +32,12 @@
 				alert("Максимальное число - y")
 			}
 			
-			else if(x=y) {
-				alert("Введенные числа равны!")
+			else if(x>y) {
+				alert("Максимальное число - x")
 			}
 			
-			else {
-				alert("Максимальное число - x")
+			else if(x=y){
+				alert("Введенные числа равны")
 			}
 			</script>  
 	</div>	
