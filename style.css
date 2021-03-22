@@ -26,6 +26,15 @@ h2 {
 	color: cornsilk;
 	font-size: 28px;
 }
+
+.delete2, .run {
+	color: palevioletred;
+	font-size: 28px;
+	background-color: papayawhip;
+	padding: 5px;
+	border-radius: 5px;
+}
+
 .back {
 	background-color: aliceblue;
 	border-radius: 4px;
