@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Биненда А. ЛР2</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+
+$(".pane .delete").click(function(){
+	$(this).parents(".pane").animate({ opacity: "hide" }, "slow");
+});
+
+});
+
+	</script>
+</head>
+<body>
+	<div class="container">
+		<a class="back" href="laba2.html">назад</a>
+		<h2>
+			Пример 2.
+		</h2>
+		<div class="pane pane2">
+			<img class="delete delete2" alt="Нажми и все исчезнет!">
+			<p class="text">
+				jQuery - библиотека Javascript, фокусирующаяся на взаимодействии Javascript и HTML. Библиотека jQuery помогает легко получать доступ к любому элементу DOM, обращаться к атрибутам и содержимому элементов DOM, манипулировать ими. Также библиотека jQuery предоставляет удобный АРІ при работе с AJAX. 
+			</p>
+		</div>
+	</div>	
+</body>
+</html>
