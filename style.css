@@ -35,7 +35,7 @@ h2 {
 	border-radius: 5px;
 }
 
-.back {
+.back , .btn-slide{
 	background-color: aliceblue;
 	border-radius: 4px;
 	color: blue;
