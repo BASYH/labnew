@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Биненда А. ЛР2</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+	$(document).ready(function(){
+$(".run").click(function() {
+	$("#box").animate({opacity: "0.1", left:"+=400"}, 1200)
+	.animate({opacity: "0.4", top: "+=160", height: "40", width: "40"}, "slow") 
+	.animate({opacity: "1", left: "0", height: "50", width: "100"}, "slow")
+	.animate ({top: "0"}, "fast")
+	.slideUp()
+	.slideDown("slow")
+	return false;
+})
+
+});
+
+	</script>
+</head>
+<body>
+	<div class="container">
+		<a class="back" href="laba2.html">назад</a>
+		<h2>
+			Пример 3.
+		</h2>
+		<button class="run">Начать движение</button>
+		<div class="control_block_container">
+			<div id="box">
+				<p class="text">
+					Управляемый блок
+				</p>
+			</div>
+		</div>
+	</div>	
+</body>
+</html>
