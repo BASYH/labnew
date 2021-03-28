@@ -11,37 +11,47 @@
 			$(document).ready(function(){
 				$("#b").click(function(){
 					var name = document.getElementById("name"), inp1 = document.getElementById("inp1"), inp2=document.getElementById("inp2");
-					var email = document.getElementById("email"), inp3 = document.getElementById("inp3");
+					var email = document.getElementById("email"), inp3=document.getElementById("inp3")
 					if (name.value ==""){
-					alert("Вы не заполнили поле имени!")
-					return false
-				}
+						alert("Вы не заполнили поле имени!")
+						document.getElementById('name').style.borderColor="red"}
+					else {
+						document.getElementById('name').style.borderColor="black";
+					}
 					if (inp1.value.length<4){
-					alert("Пароль должен содержать в себе больше 4 символов!")
-					return false
-				}
+						alert("Пароль должен содержать в себе больше 4 символов!")
+						document.getElementById('inp1').style.borderColor="red"}
+					else {
+						document.getElementById('inp1').style.borderColor="black";
+					}
 					if (inp1.value!=inp2.value){
 					alert("Не совапдают пароль и его подтверждение!");
 					inp1.value = "";
 					inp2.value = "";
-					return false
-				}
+					document.getElementById('inp1').style.borderColor="red"
+					document.getElementById('inp2').style.borderColor="red"}
+					else {
+						document.getElementById('inp1').style.borderColor="black";
+						document.getElementById('inp2').style.borderColor="black";
+					}
 				if (email.value==""){
 					alert("Email не введен!")
-					return false
-				}
-				if (email.value==""){
-					alert("Email не введен!")
-					return false
-				}
+					document.getElementById('email').style.borderColor="red"}
+					else {
+						document.getElementById('email').style.borderColor="black";
+					}
 				if (email.value.indexOf("@")==-1) {
-				alert("Email не содержит символ \"@\".");
-				return false
-				}
-				if (inp3.value.lenght<10) {
-				alert("Сообщение либо пустое, либо не содержит 10 символов");
-				return false
-				}
+					alert("Email не содержит символ \"@\".");
+					document.getElementById('email').style.borderColor="red"}
+					else {
+						document.getElementById('email').style.borderColor="black";
+					}
+				if (inp3.value.length<11){
+					alert("Текст сообщения либо содержит меньше 10 символов, либо пуст!")
+					document.getElementById('inp3').style.borderColor="red"}
+					else {
+						document.getElementById('inp3').style.borderColor="black";
+					}
 				})
 			})
 		</script>
@@ -58,8 +68,8 @@
 			<p class="text">Потверждение пароля* <input type="password" id="inp2" size=10 required></p>		
 			<p class="text">EMAIL* <input type="email" id="email" required></p>	
 			<p class="text">Тема сообщения: <input type="text" size=15 required></p>		
-			<p class="text">Сообщение: <textarea id="inp3" cols=25 rows=1>Введите сообщение</textarea></p><br>		
-			<input type="button" value="Проверить" id="b" class="back"><input type="reset" class="back" value="Очистить форму">			
+			<p class="text">Сообщение: <input type="text" id="inp3" size=30 required></p><br>		
+			<input type="button" value="Отправить" id="b" class="back"><input type="reset" class="back" value="Очистить форму">			
 			<p class="text">* - необходимые для заполнения поля</p>
 	</div>	
 </body>
