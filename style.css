@@ -87,3 +87,8 @@ h2 {
 	margin-bottom: 40px;
 	margin-right: 10px;
 }
+
+.kit {
+	width: 500px;
+	border-radius: 5px;
+}

@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Биненда А. ЛР2</title>
+	<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript">
+				$(document).ready(function(){
+$("#button1").click(function() {
+	$("#kit").animate({paddingRight="+100"}, 1200)
+})
+})
+		</script>
+</head>
+<body>
+	<div class="container">
+		<a class="back" href="laba2.html">назад</a>
+		<h2>
+			Задание 3.
+		</h2>
+		<div id="kit">
+			<img src="kit.JPG" alt="картинка" class="kit"><br>
+		</div>
+		<button class="btn-slide" id="button1">вправо</button>
+		<button id="button2" class="btn-slide">влево</button>
+		<button id="button3" class="btn-slide">вниз</button>
+		<button id="button4" class="btn-slide">вверх</button>
+	</div>	
+</body>
+</html>
