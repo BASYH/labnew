@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Биненда А. ЛР2</title>
+	<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#b").click(function(){
+					var name = document.getElementById("name"), inp1 = document.getElementById("inp1"), inp2=document.getElementById("inp2");
+					var email = document.getElementById("email"), inp3 = document.getElementById("inp3");
+					if (name.value ==""){
+					alert("Вы не заполнили поле имени!")
+					return false
+				}
+					if (inp1.value.length<4){
+					alert("Пароль должен содержать в себе больше 4 символов!")
+					return false
+				}
+					if (inp1.value!=inp2.value){
+					alert("Не совапдают пароль и его подтверждение!");
+					inp1.value = "";
+					inp2.value = "";
+					return false
+				}
+				if (email.value==""){
+					alert("Email не введен!")
+					return false
+				}
+				if (email.value==""){
+					alert("Email не введен!")
+					return false
+				}
+				if (email.value.indexOf("@")==-1) {
+				alert("Email не содержит символ \"@\".");
+				return false
+				}
+				if (inp3.value.lenght<10) {
+				alert("Сообщение либо пустое, либо не содержит 10 символов");
+				return false
+				}
+				})
+			})
+		</script>
+</head>
+<body>
+	<div class="container">
+		<a class="back" href="laba2.html">назад</a>
+		<h2>
+			Задание 2.
+		</h2>
+		<form name="forme" onsubmit="return validate()">
+			<p class="text">Ваше имя* <input type="name" id="name" size=10 required></p>			
+			<p class="text">Пароль* <input type="password" id="inp1" size=10 required></p>			
+			<p class="text">Потверждение пароля* <input type="password" id="inp2" size=10 required></p>		
+			<p class="text">EMAIL* <input type="email" id="email" required></p>	
+			<p class="text">Тема сообщения: <input type="text" size=15 required></p>		
+			<p class="text">Сообщение: <textarea id="inp3" cols=25 rows=1>Введите сообщение</textarea></p><br>		
+			<input type="button" value="Проверить" id="b" class="back"><input type="reset" class="back" value="Очистить форму">			
+			<p class="text">* - необходимые для заполнения поля</p>
+	</div>	
+</body>
+</html>
