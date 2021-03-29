@@ -1,0 +1,38 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Биненда А. ЛР2</title>
+	<style>
+		#kit {
+		  position: absolute;
+		}
+	  </style>
+	<script type="text/javascript" src="jquery.js"></script>
+		<script type="text/javascript">
+				$(document).mousemove(function(event){
+					event = event || window.event; 
+    				console.log(event); 
+    				document.querySelector('.x').innerHTML = event.offsetX;
+    				document.querySelector('.y').innerHTML = event.offsetY;
+
+})
+		</script>
+</head>
+<body>
+	<div class="container">
+		<a class="back" href="laba2.html">назад</a>
+		<h2>
+			Задание 4.
+		</h2>
+		<p class="text">Координаты</p>
+		<div class="coords text">
+			X: <span class="x"></span><br>
+			Y: <span class="y"></span>
+		</div>  
+	</div>	
+</body>
+</html>
