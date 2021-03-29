@@ -6,12 +6,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
 	<title>Биненда А. ЛР2</title>
+	<style>
+		#kit {
+		  position: absolute;
+		}
+	  </style>
 	<script type="text/javascript" src="jquery.js"></script>
 		<script type="text/javascript">
 				$(document).ready(function(){
-$("#button1").click(function() {
-	$("#kit").animate({paddingRight="+100"}, 1200)
-})
+					$("#button1").click(function() {
+						
+						$("#kit").animate({left:"+=100"})
+					})
+					$("#button2").click(function() {
+						$("#kit").animate({left:"-=100"})
+					})
+					$("#button3").click(function() {
+						$("#kit").animate({top: "+=100"})
+					})
+					$("#button4").click(function() {
+						$("#kit").animate({top: "-=100"})
+					})
 })
 		</script>
 </head>
@@ -21,13 +36,11 @@ $("#button1").click(function() {
 		<h2>
 			Задание 3.
 		</h2>
-		<div id="kit">
-			<img src="kit.JPG" alt="картинка" class="kit"><br>
-		</div>
 		<button class="btn-slide" id="button1">вправо</button>
-		<button id="button2" class="btn-slide">влево</button>
-		<button id="button3" class="btn-slide">вниз</button>
-		<button id="button4" class="btn-slide">вверх</button>
+		<button class="btn-slide" id="button2">влево</button>
+		<button class="btn-slide" id="button3">вниз</button>
+		<button class="btn-slide" id="button4">вверх</button><br>
+		<span id="kit"> <img src="kit.JPG" alt="картинка" class="kit"></span>
 	</div>	
 </body>
 </html>
