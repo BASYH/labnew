@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Биненда А. ЛР2</title>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			var all;
+			all=0;
+			$("#b").click(function(){
+				var k1,k2,k3,k4;
+				all+=1;
+				var inp = document.getElementsByName('q3');
+				value1=0;
+				value2=0;
+				value3=0;
+				value4=0;
+				k1=0;
+				k2=0;
+				k3=0;
+				k4=0;
+				for (var i = 0; i < inp.length; i++) {
+        			if (inp[i].checked) {
+						alert(i);
+            			if (i==0){
+							value1=1;
+							k1+=1
+							alert("all"+all)
+							kolvalue1=k1*100/all;
+							alert("Так же, как вы, ответили "+kolvalue1+"% людей!")
+							break
+						}
+						if (i==1){
+							value2=1;
+							k2+=1
+							alert("all"+all)
+							kolvalue2=k2*100/all;
+							alert("Так же, как вы, ответили "+kolvalue2+"% людей!")
+							break
+						}
+						if (i==2){
+							value3=1;
+							k3+=1
+							alert("all"+all)
+							kolvalue3=k3*100/all;
+							alert("Так же, как вы, ответили "+kolvalue3+"% людей!")
+							break
+						}
+						if (i==3){
+							value4=1;
+							k4+=1
+							alert("all"+all)
+							kolvalue4=k4*100/all;
+							alert("Так же, как вы, ответили "+kolvalue4+"% людей!")
+							break
+						}
+        		} 
+		}})})
+	</script>
+</head>
+<body>
+	<div class="container">
+		<a class="back" href="laba2.html">назад</a>
+		<h2>
+			Задание 6.
+		</h2>
+		<form name="quiz" action="javascript:check();" class="quizform">
+		<div class="quizsection">
+			<h2>Вопрос 1</h2>
+			<p>У вас есть дома котик?</p>
+			<div class="answer">
+				<input name="q3" value="value1" id="value1" type="radio" checked="checked" />Да!
+			</div>
+			<div class="answer">
+				<input name="q3" value="value1" id="value2" type="radio" />Нет(
+			</div>
+			<div class="answer">
+				<input name="q3" value="value2" id="value3" type="radio" />Да, но хочу еще!
+			</div> 
+			<div class="answer">
+				<input name="q3" value="value1" id="value4" type="radio" />Нет, и не будет. Я собачник.
+			</div> 
+		</div> 
+		<br>
+		<input type="button" value="Отправить" id="b" class="back">
+		</form> 
+		</section>
+	</div>	
+</body>
+</html>
