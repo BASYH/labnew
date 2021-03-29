@@ -7,13 +7,21 @@
     <link rel="stylesheet" href="style.css">
 	<title>Биненда А. ЛР2</title>
     <style type="text/css">
-        #draggable {font-size: x-large; border: thin solid black;
+        #drag {font-size: x-large; border: thin solid black;
             width: 5em; text-align: center; padding:10px}
     </style>
     <script type="text/javascript">
-		$(function() {
-			$('#draggable').draggable();
+	$(document).ready(function(){
+		$('#drag').mousedown(function(){ 
+	    $('#drag').css( "background", "white" ); 
+	  });
+		$('#drag').mousemove(function(event) {
+			$('#drag').draggable();
 		});
+		$('#drag').mouseup(function(){ 
+	    $('#drag').css( "background", "palevioletred" );
+	  });
+	});
     </script> 
 </head>
 <body>  
@@ -22,7 +30,7 @@
 		<h2>
 			Задание 5.
 		</h2>  
-    <div id="draggable">
+    <div id="drag">
         Перетащи меня
     </div>
 </div>
