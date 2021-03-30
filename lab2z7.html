@@ -26,14 +26,21 @@
 				'1', '2', '3', '+',
 				'4', '5', '6', '-',
 				'7', '8', '9', '/',
-				'0', 'del', 'c', '.'
+				'0', '.', 'del', '*',
 			];
+			var c = ['c'];
 			var ravno = ['='];
 			var calc = document.getElementById('calc');
 			var textArea = document.getElementById('inputVal');
 			signs.forEach(function (sign) {
 				var signElement = document.createElement('div');
 				signElement.className = 'btn';
+				signElement.innerHTML = sign;
+				calc.appendChild(signElement);
+			});
+			c.forEach(function (sign) {
+				var signElement = document.createElement('div');
+				signElement.className = 'c';
 				signElement.innerHTML = sign;
 				calc.appendChild(signElement);
 			});
@@ -46,6 +53,9 @@
 
 			document.querySelectorAll('#calc-wrap .btn').forEach(function (button) {
 				button.addEventListener('click', onButtonClick);
+			});
+			document.querySelectorAll('#calc-wrap .c').forEach(function (button2) {
+				button2.addEventListener('click', onButtonClick);
 			});
 			document.querySelectorAll('#calc-wrap .ravno').forEach(function (button1) {
 				button1.addEventListener('click', onButtonClick);

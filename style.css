@@ -103,6 +103,17 @@ h2 {
 	font-weight: 700;
 }
 
+.c {
+	width: 240px;
+	height: 60px;
+	background: papayawhip;
+	display: inline-block;
+	text-align: center;
+	line-height: 60px;
+	user-select: none;
+	font-weight: 700;
+}
+
 .ravno {
 	width: 240px;
 	height: 60px;
@@ -115,7 +126,7 @@ h2 {
 	user-select: none;
 }
 
-.btn:hover, .ravno:hover {
+.btn:hover, .ravno:hover, .c:hover {
 	background: palevioletred;
 	color: #fff;
 }
