@@ -142,3 +142,49 @@ h2 {
 	font-size: 16px;
 	resize: vertical;
 }
+
+.news-img {
+	width: 90%;
+	padding: 20px;
+}
+
+.news-p {
+	font-size: 20px;
+}
+
+section {
+	display: inline-block;
+	background-color: papayawhip;
+	margin-right: 30px;
+	margin-bottom: 30px;
+	padding-top: auto;
+	padding-left: 20px;
+	padding-right: 20px;
+	border-radius: 3px;
+	width: 450px;
+	height: auto;
+	color: black;
+}
+
+.news {
+	width: 100%;
+	height: 520px;
+}
+
+.zag {
+	background-color: pink;
+	padding: 10px;
+	border-radius: 3px;
+	margin-bottom: 30px;
+}
+
+.title-rss {
+	font-size: 20px;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.rss-img {
+	width: 450px;
+	height: auto;
+}

@@ -1,0 +1,72 @@
+﻿
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Биненда А.</title>
+</head>
+<body>
+	<div class="container">
+		<script>
+			let tek = 5;
+			function showRSS(str) {
+				alert(tek);
+				if (str.length==0) {
+    document.getElementById("rssOutput").innerHTML="";
+    return;
+  }
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else {  // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("rssOutput").innerHTML=this.responseText;
+    }
+  }
+			   xmlhttp.open("GET","rss.php?tek="+tek,true);
+			   xmlhttp.send();
+			   tek+=5;
+			}
+		 </script>
+	</head>
+	<body>
+		<h1>Задание 1</h1>
+		<section>
+			<div class="title-rss">Котики - это круто!</div>
+			<div>Британские ученые сделали важное открытие: котики придают уверенности его хозяину, делают его счастливее. Всявязи с этим люди начинают позитивнее мыслись, меньше лениться, повышается продуктивность. Заводите котиков! Это круто!</div>
+			<img src="kotnews.jpg" alt="котик" class="rss-img">
+		</section>
+		<section>
+			<div class="title-rss">Пес нашел семью</div>
+			<div>В Улан-Удэ 14-летний пес, спасенный волонтерами после ДТП, нашел семью: спустя полгода Пишто вернулся к хозяевам, которые считали его погибшим</div>
+			<img src="dog.jpg" alt="собака" class="rss-img">
+		</section>
+		<section>
+			<div class="title-rss">Весна в самом разгаре</div>
+			<div>Вот уже несколько дней жители Уфы наслаждаются приятной весенней погодой. Прощайте теплые куртки! По словам синоптиков, такая теплая погода будет радовать людей еще долгое время. Выходите гулять!</div>
+			<img src="vesna.jpg" alt="весна" class="rss-img">
+		</section>
+		<section>
+			<div class="title-rss">Спорт - это жизнь</div>
+			<div>Спортсмен-любитель Максим Егоров устроил марафон через всю страну — он преодолел расстояние в 10 тысяч километров, добежав от Санкт-Петербурга до Владивостока</div>
+			<img src="run.jpg" alt="собака" class="rss-img">
+		</section>
+		<section>
+			<div class="title-rss">Технологии</div>
+			<div>В Калужской области запустили уникальную ИТ-платформу: в «Русском продукте» внедряют проект по цифровизации и построению цифрового двойника производства</div>
+			<img src="it.jpg" alt="собака" class="rss-img">
+		</section>
+		<span id = "rssOutput"></span>
+		<form>
+			<input onclick = "showRSS(this.value)" type="button" value="еще новости" id="b">
+		</form>
+		<br>
+</div>
+	</body>
+	</html> 
