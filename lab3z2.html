@@ -1,0 +1,67 @@
+﻿<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="style.css">
+	<title>Биненда А.</title>
+
+  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+<script>
+	let tek = 3;
+	//var nam = document.getElementById("name"), email = document.getElementById("email"), otz=document.getElementById("otz");
+	window.addEventListener("load",function() {
+  var request = new XMLHttpRequest();
+  request.open('GET','getotziv.php',true);
+  request.addEventListener('readystatechange', function() {
+    if ((request.readyState==4) && (request.status==200)) {
+      var welcome = document.getElementById('Output');
+      welcome.innerHTML = request.responseText;
+    }
+  });
+request.send();
+});
+    function showRSS(str) {
+		
+		if (str.length==0) {
+    document.getElementById("Output").innerHTML="";
+    return;
+  }
+  if (window.XMLHttpRequest) {
+    // code for IE7+, Firefox, Chrome, Opera, Safari
+    xmlhttp=new XMLHttpRequest();
+  } else {  // code for IE6, IE5
+    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange=function() {
+    if (this.readyState==4 && this.status==200) {
+      document.getElementById("Output").innerHTML=this.responseText;
+    }
+  }
+  tek+=1;
+  var nam = document.getElementById("name").value, email = document.getElementById("email").value, otz=document.getElementById("otz").value;
+var variables = "tek="+tek+"&name="+nam+"&email="+email+"&otz="+otz;
+			   xmlhttp.open("GET","otziv.php?"+variables,true);
+			   xmlhttp.send();
+
+}
+
+</script>
+</head>
+<body>
+	<div class="container">
+		<a class="back" href="laba3.html">назад</a>
+		<h1>Задание 2</h1>
+    <form method="post" id="ajax_form" action="" >
+		<p class="text">Ваше имя <input type="text" name="name" id="name"/></p>
+		<p class="text">EMAIL <input type="text" name="email" id="email"/></p>
+		<p class="text">Отзыв <input type="text" name="otz" id="otz"/></p>
+        <input onclick = "showRSS(this.value)" type="button" id="btn" value="Отправить" />
+    </form>
+    <br>
+    <div id="result_form"></div> 
+	<span id = "Output"></span>
+</div> 
+</body>
+</html>

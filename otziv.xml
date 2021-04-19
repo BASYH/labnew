@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spisok>
+   <otziv>
+      <name>
+         Александра Биненда
+      </name>
+      <email>
+         binendaa@yandex.ru
+      </email>
+      <otz>
+         Лаба очень сложная.. но познавательная!
+      </otz>
+   </otziv>
+   <otziv>
+      <name>
+         Анна
+      </name>
+      <email>
+         anna@anna.ru
+      </email>
+      <otz>
+         Все круто!
+      </otz>
+   </otziv>
+   <otziv>
+      <name>
+         Тимур
+      </name>
+      <email>
+         tim1999@yandex.ru
+      </email>
+      <otz>
+         Болбшое спасибо!!
+      </otz>
+   </otziv>
+<otziv><name>София</name><email>so@mail.ru</email><otz>ура, лаба готова</otz></otziv><otziv><name>Костя</name><email>kkk@rambler.ru</email><otz>супер</otz></otziv><otziv><name>Настя</name><email>nasty@rambler.ru</email><otz>хочу каникулы!</otz></otziv></spisok>
