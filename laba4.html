@@ -5,13 +5,41 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
+	<script src="jquery-ui.js"></script> 
+	
 	<title>Биненда А. ЛР3</title>
 </head>
 <body>
 	<div class="container">
 		<a class="back" href="index.html">назад</a>
 		<h1>Лабораторная работа №4</h1>
-		
+		<h3>Слайдер</h3>
+<div id="slider"></div> <br />
+Количество пассажиров: <span id="sliderValue"></span>
+<script type="text/javascript">
+$(function(){
+         
+    $('#slider').slider({
+		min: 1,
+		max: 15,
+        change: function (event, ui){
+            var val = $('#slider').slider('value');
+            $('#sliderValue').html(val);
+        },
+        start: function(event, ui){
+            console.log('Начало движения слайдера');
+        },
+        slide: function(event, ui){
+            console.log('Перемещение слайдера');
+        },
+        stop: function(event, ui){
+            console.log('Завершение движения слайдера');
+        }
+    });
+});
+</script>
 	</div>	
 </body>
 </html>
