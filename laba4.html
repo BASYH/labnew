@@ -14,13 +14,49 @@
 <body>
 	<div class="container">
 		<a class="back" href="index.html">назад</a>
-		<h1>Лабораторная работа №4</h1>
-		<h3>Слайдер</h3>
-<div id="slider"></div> <br />
-Количество пассажиров: <span id="sliderValue"></span>
+		<h1>Купить билет на скоростной поезд САПСАН</h1>
+		<p class="text">Перед покупкой билета, пожалуйста, ознакомьтесь с классами обслуживания.</p>
+			<span id="accordion">
+			<h3>Эконом</h3> <div>
+			<p>Данный класс обслуживания включает в себя аудио- видеотрансляцию, развлекательный медиацентр.</p>
+			</div> 
+			<h3>Эконом+</h3> <div>
+			<p>Тоже самое, что и в «Эконом», но прибавляются: питание, предварительный выбор питания, автомат для чистки обуви, доступ в Интернет и зарядка мобильных телефонов.</p>
+			</div> 
+			<h3>Бизнес</h3> <div>
+			<p>К «Эконом+» добавляем также детский набор, дорожный набор, прессу, плед, подушку и VIP-зал на вокзалах в Москве, Петербурге и Твери.</p></div> 
+			<h3>Первый</h3> <div>
+			<p>Добавляем к «Бизнесу» кресло, которое раскладывается в положение полулежа.</p>
+			</div> 
+		</span>
+			<br>
+			<p class="text">Выберете направление:</p>
+		<form class="form-inline">
+				<div class="form-group">
+				<label for="search"></label> <input type="text"  id="search" placeholder="Откуда" name="otk">
+				<label class="text">  &#8594; </label><input type="text"  id="search2" placeholder="Куда">
+				<label for="date"></label> <input type="text"  id="date" class="input-date" placeholder="День">
+				</div>
+		</form>
+		<br><br>
+		<p class="text" style="display: inline;">Количество пассажиров: </p><p class="text" style="display: inline;" id="sliderValue"></p>
+		<br><br>
+		<div id="slider" style="width: 60%;"></div> <br /><br>
+		<input type="button" value="Найти билет!" id="b" class="back">
 <script type="text/javascript">
 $(function(){
-         
+	var availableTags = ["Москва", "Санкт-Петербург", "Нижний Новгород", "Владимир", "Тверь"]; 
+	$("#search" ).click(function(){
+		$("#search").autocomplete({ source: availableTags });
+	});
+	$("#search2").click(function(){
+		var e = document.getElementById("search");
+		var strUser = e.value;
+		availableTags = availableTags.filter((n) => {return n != strUser});
+		$("#search2").autocomplete({ source: availableTags });
+	});
+	$("#date").datepicker({ dateFormat: "dd.mm.yy" });
+	$("#accordion" ).accordion({  collapsible: true });   
     $('#slider').slider({
 		min: 1,
 		max: 15,
