@@ -9,7 +9,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> 
 	<script src="jquery-ui.js"></script> 
 	
-	<title>Биненда А. ЛР3</title>
+	<title>Биненда А. ЛР4</title>
 </head>
 <body>
 	<div class="container">
@@ -103,8 +103,8 @@ $(function(){
 		$( "#dialog" ).dialog('open'); }); 
 	$('#ticket').dialog({ autoOpen: false, width: 660 });
 	$('#rst').dialog({ autoOpen: false, width: 650, buttons:{
-        "OK": function(){ alert("Спасибо за бронь!"); $( "#rst" ).dialog('close'); },
-        "not OK": function(){alert("Жаль!"); $( "#rst" ).dialog('close');}
+        "Да": function(){ alert("Спасибо за бронь!"); $( "#rst" ).dialog('close'); },
+        "Нет": function(){alert("Жаль!"); $( "#rst" ).dialog('close');}
     }
    });
 	$(".reservation").click(function(){
